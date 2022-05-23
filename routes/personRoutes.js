@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
     const {name, salary, charge} = req.body;
     
     if(!name | !salary | !charge ){
-        req.status(422).json({error: 'Os campos Nome, Salário e Cargo são obrigatórios'})
+        res.status(422).json({error: 'Os campos Nome, Salário e Cargo são obrigatórios'})
         return
     }
     
