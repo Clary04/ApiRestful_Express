@@ -1,5 +1,6 @@
 require('dotenv').config()
 const express = require('express')
+const cors = require('cors');
 const { json } = require('express/lib/response')
 const mongoose = require('mongoose')
 const app = express() 
@@ -10,6 +11,11 @@ app.use(
     }),
 )
 app.use(express.json())
+
+
+app.use(cors({
+    origin: '*'
+}));
 
 //rotas 
 
@@ -35,3 +41,4 @@ mongoose
    console.log(error)
 })
 
+//////

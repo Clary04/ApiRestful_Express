@@ -1,6 +1,5 @@
 const router = require('express').Router()
 
-const { app } = require('electron');
 const { json } = require('express/lib/response');
 const person = require('../models/person')
 
@@ -10,6 +9,7 @@ const person = require('../models/person')
 router.post('/', async (req, res) => {
 
     const {name, salary, charge} = req.body;
+
     
     if(!name | !salary | !charge ){
         res.status(422).json({error: 'Os campos Nome, Salário e Cargo são obrigatórios'})
@@ -54,7 +54,7 @@ router.patch('/:id', async (req, res) => {
             res.status(422).json({error: "Usuário não encontrado!"})
             return
         }
-        res.status(200).json(Objperson)
+        res.status(200).json({message: "Atualizado com sucesso!"})
 
     }catch(error){
         res.status(500).json({error: error})

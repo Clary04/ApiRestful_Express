@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td{
+            padding: 10px 20px;
+            border: 1px solid #000;
+        }
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud de Profissionais</title>
+</head>
+<body>
+    <table>
+        <thead id="thead_1">
+            <tr>
+                <th>Nome</th>
+                <th>Salário</th>
+                <th>Profissão</th>
+                <th>Ação: Remover</th>
+                <th>Ação: Atualizar</th>
+            </tr>
+        </thead>
+        <tbody id="tbody_1"></tbody>
+    </table>
+      
+    <section style="margin-top: 60px;">
+        <form>
+            <h1>Cadastro de Profissionais</h1>
+            <div>
+                <label>Informe seu nome: </label>
+                <input id="name" type="text" style="display: flex;"/>
+                <label>Informe seu salário: </label>
+                <input id="salary" type="number" style="display: flex;"/>
+                <label>Informe sua profissão: </label>
+                <input id="charge" type="text" style="display: flex;"/>
+            </div>       
+        </form>
+    </section>
+    <button id="btnCadastrar" onclick="ManipularDados()">Cadastrar</button>
+    <button id="btnConfirmaAtualizacao">Confirmar Atualização</button>
+</body>
+<script src="index.js"></script>
+</html>
